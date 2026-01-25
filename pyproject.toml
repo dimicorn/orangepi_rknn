@@ -1,0 +1,11 @@
+[project]
+name = "py"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "rknn-toolkit2>=2.3.2",
+    "torch>=2.2.0",
+    "torchvision>=0.17.0",
+]
