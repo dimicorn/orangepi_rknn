@@ -9,7 +9,11 @@ wheels/
 # Virtual environments
 .venv
 Taskfile.yml
-weights
+*fp16.onnx
+*fp16.rknn
+*int8.onnx
+*int8.rknn
+*qat.rknn
 .devcontainer
 .vscode
 *.tar
