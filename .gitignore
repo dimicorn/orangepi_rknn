@@ -9,3 +9,8 @@ wheels/
 # Virtual environments
 .venv
 Taskfile.yml
+weights
+.devcontainer
+.vscode
+*.tar
+*.JPEG
