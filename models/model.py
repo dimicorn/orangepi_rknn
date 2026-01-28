@@ -78,4 +78,34 @@ class ClassificationModel(Model):
         self.MEAN = [123.675, 116.28, 103.53]
         self.STD = [58.395, 57.12, 57.375]
         self.input_size = [3, 224, 224]
+
+
+class DetectionModel(Model):
+    def __init__(
+        self,
+        model_name: str,
+        quantize: bool = False,
+        quantize_type: Literal["ptq", "qat"] | None = None,
+        dataset: str | None = None,
+    ) -> None:
+        super().__init__(model_name, quantize, quantize_type, dataset)
+        self.MEAN = [0.0, 0.0, 0.0]
+        self.STD  = [255.0, 255.0, 255.0]
+        # FIXME: check input size
+        self.input_size = [3, 640, 640]
+
+
+class SegmentationModel(Model):
+    def __init__(
+        self,
+        model_name: str,
+        quantize: bool = False,
+        quantize_type: Literal["ptq", "qat"] | None = None,
+        dataset: str | None = None,
+    ) -> None:
+        super().__init__(model_name, quantize, quantize_type, dataset)
+        self.MEAN = [0.0, 0.0, 0.0]
+        self.STD  = [255.0, 255.0, 255.0]
+        # FIXME: check input size
+        self.input_size = [3, 256, 256]
         

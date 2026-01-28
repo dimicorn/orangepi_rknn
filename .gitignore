@@ -17,4 +17,8 @@ Taskfile.yml
 .devcontainer
 .vscode
 *.tar
+*.zip
 *.JPEG
+*.jpg
+*.png
+*.pt
