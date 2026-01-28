@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10,<3.11"
 dependencies = [
+    "munch>=4.0.0",
     "rknn-toolkit2>=2.3.2",
     "setuptools>=80.10.2",
     "torch>=2.2.0",

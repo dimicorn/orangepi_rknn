@@ -12,5 +12,7 @@ class EfficientNetB0(ClassificationModel):
         dataset: str | None = None,
     ) -> None:
         super().__init__(model_name, quantize, quantize_type, dataset)
-        self.model = models.efficientnet_b0(weights=models.EfficientNet_B0_Weights.IMAGENET1K_V1)
+        self.model = models.efficientnet_b0(
+            weights=models.EfficientNet_B0_Weights.IMAGENET1K_V1
+        )
         self.model.eval()

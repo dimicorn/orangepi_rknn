@@ -273,6 +273,15 @@ wheels = [
 ]
 
 [[package]]
+name = "munch"
+version = "4.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e7/2b/45098135b5f9f13221820d90f9e0516e11a2a0f55012c13b081d202b782a/munch-4.0.0.tar.gz", hash = "sha256:542cb151461263216a4e37c3fd9afc425feeaf38aaa3025cd2a981fadb422235", size = 19089, upload-time = "2023-07-01T09:49:35.98Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/56/b3/7c69b37f03260a061883bec0e7b05be7117c1b1c85f5212c72c8c2bc3c8c/munch-4.0.0-py2.py3-none-any.whl", hash = "sha256:71033c45db9fb677a0b7eb517a4ce70ae09258490e419b0e7f00d1e386ecb1b4", size = 9950, upload-time = "2023-07-01T09:49:34.472Z" },
+]
+
+[[package]]
 name = "networkx"
 version = "3.4.2"
 source = { registry = "https://pypi.org/simple" }
@@ -562,6 +571,7 @@ name = "py"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "munch" },
     { name = "rknn-toolkit2" },
     { name = "setuptools" },
     { name = "torch" },
@@ -576,6 +586,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "munch", specifier = ">=4.0.0" },
     { name = "rknn-toolkit2", specifier = ">=2.3.2" },
     { name = "setuptools", specifier = ">=80.10.2" },
     { name = "torch", specifier = ">=2.2.0" },

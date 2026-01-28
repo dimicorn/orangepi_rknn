@@ -53,10 +53,13 @@ class Model:
         )
         if to_inspect:
             print(inspect.signature(rknn.config))
-        assert rknn.load_onnx(
-            f"{self.model_name}.onnx",
-            input_size_list=[self.input_size],
-        ) == 0
+        assert (
+            rknn.load_onnx(
+                f"{self.model_name}.onnx",
+                input_size_list=[self.input_size],
+            )
+            == 0
+        )
         if self.quantize:
             assert rknn.build(do_quantization=True, dataset=self.dataset) == 0
         else:
@@ -90,7 +93,7 @@ class DetectionModel(Model):
     ) -> None:
         super().__init__(model_name, quantize, quantize_type, dataset)
         self.MEAN = [0.0, 0.0, 0.0]
-        self.STD  = [255.0, 255.0, 255.0]
+        self.STD = [255.0, 255.0, 255.0]
         # FIXME: check input size
         self.input_size = [3, 640, 640]
 
@@ -105,7 +108,6 @@ class SegmentationModel(Model):
     ) -> None:
         super().__init__(model_name, quantize, quantize_type, dataset)
         self.MEAN = [0.0, 0.0, 0.0]
-        self.STD  = [255.0, 255.0, 255.0]
+        self.STD = [255.0, 255.0, 255.0]
         # FIXME: check input size
         self.input_size = [3, 256, 256]
-        
